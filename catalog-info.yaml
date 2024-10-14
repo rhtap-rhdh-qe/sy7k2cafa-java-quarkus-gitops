@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sy7k2cafa-java-quarkus-gitops
+  description: This is GitOps manifest for sy7k2cafa-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: sy7k2cafa-java-quarkus
+    janus-idp.io/tekton: sy7k2cafa-java-quarkus
+    backstage.io/kubernetes-id: sy7k2cafa-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:sy7k2cafa-java-quarkus
